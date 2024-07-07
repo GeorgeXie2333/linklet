@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="asset/img/favicon.png"  >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>短链生成器</title>
+    <title>~loi.lol~短链小站</title>
     <style>
       :root {
-        --color-primary: #5c7cfa;
-        --color-primary-dark: #4263eb;
-        --color-primary-alpha: #5c7cfa50;
+        --color-primary: #fc90d8;
+        --color-primary-dark: #eb42ad;
+        --color-primary-alpha: #fc09d850;
 
         --body-color: #495057;
-        --body-bg: #f8f9fa;
+        --body-bg: #ffe6fc;
 
-        --border-color: #dee2e6;
+        --border-color: #e6dee4;
       }
 
       body {
@@ -203,7 +203,7 @@
     </style>
   </head>
   <body>
-    <header><h1>短链生成器</h1></header>
+    <header><h1>loi.lol~短链小站</h1></header>
     <main x-data="app" x-cloak>
       <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
       <input placeholder="输入要缩短的网址..." x-model="url" x-ref="url" />
@@ -217,7 +217,7 @@
       <button :class="{ loading }" :disabled="loading || isValidated()" @click="submit($refs, $nextTick)">生成</button>
     </main>
     <footer>
-      基于 <a href="https://github.com/harrisonwang/linklet" target="_blank">Cloudflare</a> 的短链生成器
+      Host by <a href="https://george-tse.top/" target="_blank">George Tse</a>
     </footer>
     <script src="asset/js/alpine.js"></script>
     <script>
