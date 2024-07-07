@@ -208,9 +208,9 @@
       <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
       <input placeholder="输入要缩短的网址..." x-model="url" x-ref="url" />
       <details>
-        <summary>自定义设置</summary>
+        <summary>自定义设置（可选）</summary>
         <div>
-          <input placeholder="slug" x-model="slug" />
+          <input placeholder="slug（链接后缀）" x-model="slug" />
           <small>不设置则随机生成 slug</small>
         </div>
       </details>
@@ -263,7 +263,7 @@
 
               $nextTick(() => {
                 $refs.url.select()
-                this.alert = { type: 'success', message: `链接 ${document.execCommand('Copy') ? '复制' : '生成'} ` }
+                this.alert = { type: 'success', message: `链接已 ${document.execCommand('Copy') ? '复制' : '生成'} ` }
               })
             })
             .catch(e => {
